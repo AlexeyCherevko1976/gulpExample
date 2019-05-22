@@ -73,6 +73,13 @@ function html(cb){
 	cb();
 }
 
+
+watch([puthCompile+'less/*.less'], function(cb) {
+  lessWork();
+  cb();
+});
+
+exports.watch = watch;
 exports.connection = connection;
 exports.build = build;
 exports.html = html;
